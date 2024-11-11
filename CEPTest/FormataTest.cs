@@ -44,6 +44,6 @@ public class FormataTest
     public void RemoveFormatacaoCEP1()
     {
         var ex = Assert.Throws<ValidationException>(() => Formata.RemoveFormatacao("aaaaa"));
-        Assert.That(ex.Message, Is.EqualTo("O CEP deve estar no formato 00000-000."));
+        Assert.That(ex.Message, Is.EqualTo("O CEP deve conter 8 dígitos."));
     }
 }
