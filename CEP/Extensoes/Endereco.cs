@@ -7,6 +7,15 @@ namespace CEP.Extensoes;
 
 public static class Endereco
 {
+    /// <summary>
+    /// Método responsável por obter o endereço referente ao CEP.
+    /// </summary>
+    /// <param name="numeroCEP">
+    /// O parâmetro espera uma <see cref="string"/> com números com um dos seguintes formato 00000000 ou 00000-000.
+    /// </param>
+    /// <returns>
+    /// O método retorna um objeto do tipo <see cref="EnderecoResponse"/>, com informações referentes ao CEP.
+    /// </returns>
     public static async Task<EnderecoResponse> ObterEndereco(this string numeroCEP)
     {
         try
