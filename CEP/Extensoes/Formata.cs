@@ -15,7 +15,7 @@ public static class Formata
         try
         {
             numeroCEP.ValidaCEP();
-            return numeroCEP.Insert(5, "-");
+            return Convert.ToUInt64(numeroCEP).ToString("00000\\-000");
         }
         catch { throw; }
     }
@@ -32,7 +32,15 @@ public static class Formata
         try
         {
             numeroCEP.ValidaCEP();
-            return numeroCEP.Replace("-", "");
+            string apenasNumeros = string.Empty;
+
+            for (int i = 0; i < numeroCEP.Length; i++)
+            {
+                if(char.IsDigit(numeroCEP[i]))
+                    apenasNumeros += numeroCEP[i];
+            }
+
+            return apenasNumeros;
         }
         catch { throw; }
     }
