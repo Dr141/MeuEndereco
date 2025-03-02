@@ -1,6 +1,10 @@
 ﻿using CEP.Negocios;
 
 namespace CEP.Extensoes;
+
+/// <summary>
+/// Classe responsável por formatar o CEP.
+/// </summary>
 public static class Formata
 {
     /// <summary>
