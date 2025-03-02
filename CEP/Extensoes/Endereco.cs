@@ -5,6 +5,9 @@ using System.Net.Http.Json;
 
 namespace CEP.Extensoes;
 
+/// <summary>
+/// Classe responsável por consultar o CEP e obter o endereço completo.
+/// </summary>
 public static class Endereco
 {
     /// <summary>
