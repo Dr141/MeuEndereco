@@ -2,8 +2,16 @@
 
 namespace CEP.Negocios;
 
+/// <summary>
+/// Classe responsável por realizar validações no CEP.
+/// </summary>
 internal static class Validacoes
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="numeroCEP"></param>
+    /// <exception cref="ValidationException"></exception>
     internal static void ValidaCEP(this string numeroCEP)
     {
         StringLengthAttribute cepAttribute = new StringLengthAttribute(8)

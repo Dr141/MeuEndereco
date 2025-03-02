@@ -21,12 +21,17 @@ public static class Endereco
         try
         {
             numeroCEP.ValidaCEP();
-            if(numeroCEP.Length > 8 ) numeroCEP = numeroCEP.Replace("-","");
+            if(numeroCEP.Length > 8 ) numeroCEP = numeroCEP.RemoveFormatacao();
             return await numeroCEP.BuscarEnderecoAsync();
         }
         catch { throw; }
     }
 
+    /// <summary>
+    /// Método responsável por consumir API.
+    /// </summary>
+    /// <param name="numeroCEP">O parâmetro aguardo um valor do tipo <see cref="string"/></param>
+    /// <returns>O método retorna uma <see cref="Task"/> do tipo <see cref="EnderecoResponse"/>.</returns>
     private static async Task<EnderecoResponse> BuscarEnderecoAsync(this string numeroCEP) 
     {
         try

@@ -1,5 +1,8 @@
 ﻿namespace CEP.Modelo;
 
+/// <summary>
+/// Classe modelo de retorno da API.
+/// </summary>
 public class EnderecoResponse
 {
     public string cep { get; set; }
